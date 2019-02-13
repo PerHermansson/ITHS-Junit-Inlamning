@@ -32,6 +32,18 @@ public class BasicMath_DivisionTest {
     }
 
     @Test
+    public void test_division_with_decimals(){
+        result = math.division(100, 0.08);
+        assertTrue(result == 1250);
+    }
+
+    @Test
+    public void test_subtract_with_negative_decimals(){
+        result = math.subtract(1485.2, -43.52);
+        assertTrue(result == -34.1268382353);
+    }
+
+    @Test
     public void test_division_with_one_positive_and_one_negative_int(){
         result = math.division(15, -80);
         System.out.println(result);

@@ -32,6 +32,18 @@ public class BasicMath_MultiplyTest {
     }
 
     @Test
+    public void test_multiply_with_decimals(){
+        result = math.multiply(0.11, 0.102);
+        assertTrue(result == 0.01122);
+    }
+
+    @Test
+    public void test_multiply_with_negative_decimals(){
+        result = math.multiply(10.7, 5.3);
+        assertTrue(result == 56.71);
+    }
+
+    @Test
     public void test_multiply_with_one_positive_and_one_negative_int(){
         result = math.multiply(25, -98);
         assertTrue(result == -2450);
