@@ -30,9 +30,7 @@ public class MatematikTestTest {
     public void testSum(){
         org.junit.Assert.assertTrue("FAILURE - NOT EQUAL!", math.sum(3, 2) == 5);
 
-        //to test timeout
-      /*for (;;) {
-        }*/
+
     }
 
     @Test
@@ -42,7 +40,7 @@ public class MatematikTestTest {
 
     @Test
     public void testDivide(){
-        double x = 3,y = 2;
+        double x = 3,y = 0;
         assertThat("FAILURE - KAN INTE DIVIDERA MED 0!",y, is(not(0.0)));
         org.junit.Assert.assertTrue("FAILURE - NOT EQUAL!", math.divide(x, y) == 1.5);
     }
