@@ -1,0 +1,33 @@
+.\"
+.\" rapport
+.\"
+.\" Torgny Lyon <torgny@abc.se>
+.\"
+.ll 6.26i
+.po 1i
+.ps 10
+.vs 12
+.de H
+.sp 1v
+.ft B
+..
+.de P
+.br
+.ft R
+..
+.sp 1i
+.H
+Vilken teknik använde du för att välja testfallen?
+.P
+.H
+Vilka antaganden har du gjort?
+Det vill säga vilka beslut har du tagit och varför?
+.P
+.H
+Hittade du några avvikelser?
+Alltså något som du anser man behöver undersöka mer
+innan man kan produktionssätta systemet.
+.P
+.H
+Vad var svårast med laborationen och varför var det svårast?
+.P
