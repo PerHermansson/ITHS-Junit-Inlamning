@@ -70,4 +70,24 @@ public class MyMathTest {
     public void addUpperAndOne() {
         assertEquals(Integer.MIN_VALUE, myMath.add(Integer.MAX_VALUE, 1));
     }
+
+    @Test
+    public void addLowerAndZero() {
+        assertEquals(Integer.MIN_VALUE, myMath.add(Integer.MIN_VALUE, 0));
+    }
+
+    @Test
+    public void addAboveLowerAndNegativeOne() {
+        assertEquals(Integer.MIN_VALUE, myMath.add(Integer.MIN_VALUE + 1, -1));
+    }
+
+    @Test
+    public void addLowerAndOne() {
+        assertEquals(Integer.MIN_VALUE + 1, myMath.add(Integer.MIN_VALUE, 1));
+    }
+
+    @Test
+    public void addLowerAndNegativeOne() {
+        assertEquals(Integer.MAX_VALUE, myMath.add(Integer.MIN_VALUE, -1));
+    }
 }
