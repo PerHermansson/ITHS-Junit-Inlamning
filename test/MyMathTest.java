@@ -60,4 +60,9 @@ public class MyMathTest {
     public void addBelowUpperAndOne() {
         assertEquals(Integer.MAX_VALUE, myMath.add(Integer.MAX_VALUE - 1, 1));
     }
+
+    @Test
+    public void addUpperAndNegativeOne() {
+        assertEquals(Integer.MAX_VALUE - 1, myMath.add(Integer.MAX_VALUE, -1));
+    }
 }
