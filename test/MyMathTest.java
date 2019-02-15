@@ -29,4 +29,18 @@ public class MyMathTest {
 
         assertEquals(-2000000000, result);
     }
+
+    @Test
+    public void addPositiveAndNegativeWithoutOverflow() {
+        int result = myMath.add(1000000000, -2000000000);
+
+        assertEquals(-1000000000, result);
+    }
+
+    @Test
+    public void addNegativeAndPositiveWithoutOverflow() {
+        int result = myMath.add(-1000000000, 2000000000);
+
+        assertEquals(1000000000, result);
+    }
 }
