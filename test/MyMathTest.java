@@ -18,50 +18,36 @@ public class MyMathTest {
 
     @Test
     public void addPositivesWithoutOverflow() {
-        int result = myMath.add(1000000000, 1000000000);
-
-        assertEquals(2000000000, result);
+        assertEquals(2000000000, myMath.add(1000000000, 1000000000));
     }
 
     @Test
     public void addNegativesWithoutUnderflow() {
-        int result = myMath.add(-1000000000, -1000000000);
-
-        assertEquals(-2000000000, result);
+        assertEquals(-2000000000, myMath.add(-1000000000, -1000000000));
     }
 
     @Test
     public void addPositiveAndNegativeWithoutUnderflow() {
-        int result = myMath.add(1000000000, -2000000000);
-
-        assertEquals(-1000000000, result);
+        assertEquals(-1000000000, myMath.add(1000000000, -2000000000));
     }
 
     @Test
     public void addNegativeAndPositiveWithoutOverflow() {
-        int result = myMath.add(-1000000000, 2000000000);
-
-        assertEquals(1000000000, result);
+        assertEquals(1000000000, myMath.add(-1000000000, 2000000000));
     }
 
     @Test
     public void addPositiveAndZero() {
-        int result = myMath.add(42, 0);
-
-        assertEquals(42, result);
+        assertEquals(42, myMath.add(42, 0));
     }
 
     @Test
     public void addNegativeAndZero() {
-        int result = myMath.add(-42, 0);
-
-        assertEquals(-42, result);
+        assertEquals(-42, myMath.add(-42, 0));
     }
 
     @Test
     public void addZeroAndZero() {
-        int result = myMath.add(-0, 0);
-
-        assertEquals(0, result);
+        assertEquals(0, myMath.add(-0, 0));
     }
 }
