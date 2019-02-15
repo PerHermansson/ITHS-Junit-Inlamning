@@ -90,4 +90,9 @@ public class MyMathTest {
     public void addLowerAndNegativeOne() {
         assertEquals(Integer.MAX_VALUE, myMath.add(Integer.MIN_VALUE, -1));
     }
+
+    @Test
+    public void subtractPositivesWithoutUnderflow() {
+        assertEquals(1000000000, myMath.sub(2000000000, 1000000000));
+    }
 }
