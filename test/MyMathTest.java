@@ -50,4 +50,9 @@ public class MyMathTest {
     public void addZeroAndZero() {
         assertEquals(0, myMath.add(-0, 0));
     }
+
+    @Test
+    public void addUpperAndZero() {
+        assertEquals(Integer.MAX_VALUE, myMath.add(Integer.MAX_VALUE, 0));
+    }
 }
