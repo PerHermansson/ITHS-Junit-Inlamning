@@ -43,4 +43,18 @@ public class MyMathTest {
 
         assertEquals(1000000000, result);
     }
+
+    @Test
+    public void addPositiveAndZero() {
+        int result = myMath.add(42, 0);
+
+        assertEquals(42, result);
+    }
+
+    @Test
+    public void addNegativeAndZero() {
+        int result = myMath.add(-42, 0);
+
+        assertEquals(-42, result);
+    }
 }
