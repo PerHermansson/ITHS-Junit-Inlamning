@@ -57,4 +57,11 @@ public class MyMathTest {
 
         assertEquals(-42, result);
     }
+
+    @Test
+    public void addZeroAndZero() {
+        int result = myMath.add(-0, 0);
+
+        assertEquals(0, result);
+    }
 }
