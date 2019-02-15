@@ -55,4 +55,9 @@ public class MyMathTest {
     public void addUpperAndZero() {
         assertEquals(Integer.MAX_VALUE, myMath.add(Integer.MAX_VALUE, 0));
     }
+
+    @Test
+    public void addBelowUpperAndOne() {
+        assertEquals(Integer.MAX_VALUE, myMath.add(Integer.MAX_VALUE - 1, 1));
+    }
 }
