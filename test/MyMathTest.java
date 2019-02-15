@@ -31,7 +31,7 @@ public class MyMathTest {
     }
 
     @Test
-    public void addPositiveAndNegativeWithoutOverflow() {
+    public void addPositiveAndNegativeWithoutUnderflow() {
         int result = myMath.add(1000000000, -2000000000);
 
         assertEquals(-1000000000, result);
