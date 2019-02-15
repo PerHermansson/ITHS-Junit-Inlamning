@@ -3,27 +3,27 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class BasicMathTestAdd {
+public class BasicMathTestSubtract {
 
     @Before
     public void setUp() throws Exception {
     }
 
     @Test
-    public void simpleAddTest() {
+    public void simpleSubtract() {
         BasicMath mathTest = new BasicMath();
         int a = 4;
         int b = 2;
-        int result = mathTest.add(a, b);
-        assertTrue(result == a+b);
+        int result = mathTest.subtract(a, b);
+        assertTrue(result == a-b);
     }
 
     @Test
-    public void addNegativeNumbers(){
+    public void subtractNegativeNumbers(){
         BasicMath mathTest = new BasicMath();
         int a = -4;
         int b = -2;
-        int result = mathTest.add(a, b);
-        assertTrue(result == a+b);
+        int result = mathTest.subtract(a, b);
+        assertTrue(result == a-b);
     }
 }
