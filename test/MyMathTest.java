@@ -95,4 +95,74 @@ public class MyMathTest {
     public void subtractPositivesWithoutUnderflow() {
         assertEquals(1000000000, myMath.sub(2000000000, 1000000000));
     }
+
+    @Test
+    public void subtractNegativesWithoutOverflow() {
+        assertEquals(0, myMath.sub(-1000000000, -1000000000));
+    }
+
+    @Test
+    public void subtractNegativeFromPositiveWithoutOverflow() {
+        assertEquals(2000000000, myMath.sub(1000000000, -1000000000));
+    }
+
+    @Test
+    public void subtractPositiveFromNegativeWithoutUnderflow() {
+        assertEquals(-2000000000, myMath.sub(-1000000000, 1000000000));
+    }
+
+    @Test
+    public void subtractZeroFromPositive() {
+        assertEquals(42, myMath.sub(42, 0));
+    }
+
+    @Test
+    public void subtractZeroFromNegative() {
+        assertEquals(-42, myMath.sub(-42, 0));
+    }
+
+    @Test
+    public void subtractZeroFromZero() {
+        assertEquals(0, myMath.sub(-0, 0));
+    }
+
+    @Test
+    public void subtractZeroFromUpper() {
+        assertEquals(Integer.MAX_VALUE, myMath.sub(Integer.MAX_VALUE, 0));
+    }
+
+    @Test
+    public void subtractNegativeOneFromBelowUpper() {
+        assertEquals(Integer.MAX_VALUE, myMath.sub(Integer.MAX_VALUE - 1, -1));
+    }
+
+    @Test
+    public void subtractNegativeOneFromUpper() {
+        assertEquals(Integer.MIN_VALUE, myMath.sub(Integer.MAX_VALUE, -1));
+    }
+
+    @Test
+    public void subtractOneFromUpper() {
+        assertEquals(Integer.MAX_VALUE - 1, myMath.sub(Integer.MAX_VALUE, 1));
+    }
+
+    @Test
+    public void subtractZeroFromLower() {
+        assertEquals(Integer.MIN_VALUE, myMath.sub(Integer.MIN_VALUE, 0));
+    }
+
+    @Test
+    public void subtractOneFromAboveLower() {
+        assertEquals(Integer.MIN_VALUE, myMath.sub(Integer.MIN_VALUE + 1, 1));
+    }
+
+    @Test
+    public void subtractOneFromLower() {
+        assertEquals(Integer.MAX_VALUE, myMath.sub(Integer.MIN_VALUE, 1));
+    }
+
+    @Test
+    public void subtractNegativeOneFromLower() {
+        assertEquals(Integer.MIN_VALUE + 1, myMath.sub(Integer.MIN_VALUE, -1));
+    }
 }
