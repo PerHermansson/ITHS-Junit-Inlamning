@@ -200,4 +200,14 @@ public class MyMathTest {
     public void multiplyNegativeByPositiveWithoutUnderflow() {
         assertEquals(-1600000000, myMath.mul(-40000, 40000));
     }
+
+    @Test
+    public void multiplyUpperWithOverflow() {
+        assertEquals(Integer.MAX_VALUE << 1, myMath.mul(Integer.MAX_VALUE, 2));
+    }
+
+    @Test
+    public void multiplyLowerWithUnderflow() {
+        assertEquals(Integer.MIN_VALUE << 1, myMath.mul(Integer.MIN_VALUE, 2));
+    }
 }
