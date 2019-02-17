@@ -1,0 +1,58 @@
+#!/usr/bin/perl
+#
+# fac
+#
+# Torgny Lyon <torgny@abc.se>
+#
+
+use strict;
+use warnings;
+
+print <<EOF;
+/*
+ * Genererad av $0
+ */
+
+import java.util.Collection;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import static org.junit.Assert.assertEquals;
+
+\@RunWith(Parameterized.class)
+public class MyMath_facTest {
+    private MyMath myMath;
+    private int n, f;
+
+    public MyMath_facTest(int n, int f) {
+        this.n = n;
+        this.f = f;
+    }
+
+    \@Before
+    public void setUp() {
+        myMath = new MyMath();
+    }
+
+    \@Parameterized.Parameters
+    public static Collection getParameters() {
+EOF
+
+print ' ' x 8, "Integer t[][] = new Integer[][] {\n";
+my $f = 1;
+for (1..12) {
+    $f *= $_;
+    print ' ' x 16, "{$_, $f}", ($_ == 12) ? '};' : ',' , "\n";
+}
+
+print <<EOF;
+        return java.util.Arrays.asList(t);
+    }
+
+    \@Test
+    public void fac() {
+        assertEquals(f, myMath.fac(n));
+    }
+}
+EOF
