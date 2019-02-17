@@ -30,4 +30,8 @@ public class MyMath {
             throw new ArithmeticException();
         return 1;
     }
+
+    public double sin(double x) {
+        return 0;
+    }
 }

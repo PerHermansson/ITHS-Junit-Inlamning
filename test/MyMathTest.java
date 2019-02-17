@@ -281,4 +281,9 @@ public class MyMathTest {
             // pass
         }
     }
+
+    @Test
+    public void sinOfZero() {
+        assertEquals(0.0, myMath.sin(0), 0.0);
+    }
 }
