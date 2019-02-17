@@ -28,8 +28,8 @@ public class MyMath {
          */
         if (a < 0)
             throw new ArithmeticException();
-        if (a > 0)
-            return a * fac(a - 1);
-        return 1;
+        if (a == 0)
+            return 1;
+        return a * fac(a - 1);
     }
 }
