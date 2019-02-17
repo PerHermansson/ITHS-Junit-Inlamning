@@ -306,4 +306,14 @@ public class MyMathTest {
     public void sinOfThreePiByTwo() {
         assertEquals(-1.0, myMath.sin(Math.PI * (3.0 / 2.0)), 0.0);
     }
+
+    @Test
+    public void sinOfNegativePiByTwo() {
+        assertEquals(-1.0, myMath.sin(Math.PI * (-1.0 / 2.0)), 0.0);
+    }
+
+    @Test
+    public void sinOfNegativeThreePiByTwo() {
+        assertEquals(1.0, myMath.sin(Math.PI * (-3.0 / 2.0)), 0.0);
+    }
 }
