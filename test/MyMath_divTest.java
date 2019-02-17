@@ -29,11 +29,24 @@ public class MyMath_divTest {
 
     @Parameterized.Parameters
     public static ArrayList getParameters() {
+        int v[][] = new int[][]{
+                {1000, 100, 10},
+                {12, 4, 3},
+                {12, 3, 4},
+                {15, 5, 3}};
+        int m[][] = new int[][] {
+                {1, 1, 1},
+                {1, -1, -1},
+                {-1, 1, -1},
+                {-1, -1, 1}};
         ArrayList<Integer[]> a = new ArrayList<>();
-        a.add(new Integer[] {1000, 100, 10});
-        a.add(new Integer[] {12, 4, 3});
-        a.add(new Integer[] {12, 3, 4});
-        a.add(new Integer[] {15, 5, 3});
+        for (int i = 0; i < v.length; ++i)
+            for (int j = 0; j < m.length; ++j) {
+                Integer r[] = new Integer[v[i].length];
+                for (int k = 0; k < v[i].length; k++)
+                    r[k] = v[i][k] * m[j][k];
+                a.add(r);
+            }
         return a;
     }
 
