@@ -286,4 +286,14 @@ public class MyMathTest {
     public void sinOfZero() {
         assertEquals(0.0, myMath.sin(0), 0.0);
     }
+
+    @Test
+    public void sinOfTwoPi() {
+        assertEquals(0.0, myMath.sin(Math.PI), 0.0);
+    }
+
+    @Test
+    public void sinOfNegativeTwoPi() {
+        assertEquals(0.0, myMath.sin(-Math.PI), 0.0);
+    }
 }
