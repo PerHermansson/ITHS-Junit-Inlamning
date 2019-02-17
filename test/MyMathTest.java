@@ -185,4 +185,19 @@ public class MyMathTest {
     public void multiplyPositivesWithoutOverflow() {
         assertEquals(1600000000, myMath.mul(40000, 40000));
     }
+
+    @Test
+    public void multiplyNegativesWithoutOverflow() {
+        assertEquals(1600000000, myMath.mul(-40000, -40000));
+    }
+
+    @Test
+    public void multiplyPositiveByNegativeWithoutUnderflow() {
+        assertEquals(-1600000000, myMath.mul(40000, -40000));
+    }
+
+    @Test
+    public void multiplyNegativeByPositiveWithoutUnderflow() {
+        assertEquals(-1600000000, myMath.mul(-40000, 40000));
+    }
 }
