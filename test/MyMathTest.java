@@ -165,4 +165,9 @@ public class MyMathTest {
     public void subtractNegativeOneFromLower() {
         assertEquals(Integer.MIN_VALUE + 1, myMath.sub(Integer.MIN_VALUE, -1));
     }
+
+    @Test
+    public void multiplyZeroByZero() {
+        assertEquals(0, myMath.mul(0, 0));
+    }
 }
