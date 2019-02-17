@@ -220,4 +220,14 @@ public class MyMathTest {
     public void divideNegativeByOne() {
         assertEquals(-42, myMath.div(-42, 1));
     }
+
+    @Test
+    public void divideUpperByOne() {
+        assertEquals(Integer.MAX_VALUE, myMath.div(Integer.MAX_VALUE, 1));
+    }
+
+    @Test
+    public void divideLowerByOne() {
+        assertEquals(Integer.MIN_VALUE, myMath.div(Integer.MIN_VALUE, 1));
+    }
 }
