@@ -170,4 +170,14 @@ public class MyMathTest {
     public void multiplyZeroByZero() {
         assertEquals(0, myMath.mul(0, 0));
     }
+
+    @Test
+    public void multiplyPositiveWithZero() {
+        assertEquals(0, myMath.mul(1000000000, 0));
+    }
+
+    @Test
+    public void multiplyZeroNegative() {
+        assertEquals(0, myMath.mul(0, -1000000000));
+    }
 }
