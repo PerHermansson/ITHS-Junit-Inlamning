@@ -33,4 +33,18 @@ public class MyMath {
             r *= i;
         return r;
     }
+
+    public double sin(double x) {
+        if (x < 0)
+            x = x * -1 + Math.PI;
+        if (x > 2 * Math.PI) {  /* Reducera till mellan 0 och 2PI */
+            int n = (int) (x / (2 * Math.PI));
+            x -= n * (2 * Math.PI);
+        }
+        if (x == Math.PI / 2.0)
+            return 1;
+        else if (x == 3.0 * Math.PI / 2.0)
+            return -1;
+        return 0;
+    }
 }
