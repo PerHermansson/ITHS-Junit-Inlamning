@@ -289,11 +289,11 @@ public class MyMathTest {
 
     @Test
     public void sinOfTwoPi() {
-        assertEquals(0.0, myMath.sin(Math.PI), 0.0);
+        assertEquals(0.0, myMath.sin(2 * Math.PI), 0.0);
     }
 
     @Test
     public void sinOfNegativeTwoPi() {
-        assertEquals(0.0, myMath.sin(-Math.PI), 0.0);
+        assertEquals(0.0, myMath.sin(-2 * Math.PI), 0.0);
     }
 }
