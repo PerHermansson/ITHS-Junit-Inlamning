@@ -215,4 +215,9 @@ public class MyMathTest {
     public void dividePositiveByOne() {
         assertEquals(42, myMath.div(42, 1));
     }
+
+    @Test
+    public void divideNegativeByOne() {
+        assertEquals(-42, myMath.div(-42, 1));
+    }
 }
