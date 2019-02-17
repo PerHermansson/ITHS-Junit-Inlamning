@@ -7,6 +7,7 @@
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class MyMathTest {
     private MyMath myMath;
@@ -244,5 +245,25 @@ public class MyMathTest {
     @Test
     public void dividePositiveOddByPositiveOddWithoutRemainder() {
         assertEquals(5, myMath.div(15, 3));
+    }
+
+    @Test
+    public void divideZeroByPositive() {
+        assertEquals(0, myMath.div(0, 42));
+    }
+
+    @Test
+    public void divideZeroByNegative() {
+        assertEquals(0, myMath.div(0, -42));
+    }
+
+    @Test
+    public void dividePositiveByZero() {
+        try {
+            myMath.div(42, 0);
+            fail();
+        } catch(ArithmeticException e) {
+            // pass
+        }
     }
 }
