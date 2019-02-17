@@ -180,4 +180,9 @@ public class MyMathTest {
     public void multiplyZeroNegative() {
         assertEquals(0, myMath.mul(0, -1000000000));
     }
+
+    @Test
+    public void multiplyPositivesWithoutOverflow() {
+        assertEquals(1600000000, myMath.mul(40000, 40000));
+    }
 }
