@@ -210,4 +210,9 @@ public class MyMathTest {
     public void multiplyLowerWithUnderflow() {
         assertEquals(Integer.MIN_VALUE << 1, myMath.mul(Integer.MIN_VALUE, 2));
     }
+
+    @Test
+    public void dividePositiveByOne() {
+        assertEquals(42, myMath.div(42, 1));
+    }
 }
