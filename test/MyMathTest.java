@@ -257,14 +257,9 @@ public class MyMathTest {
         assertEquals(0, myMath.div(0, -42));
     }
 
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void dividePositiveByZero() {
-        try {
             myMath.div(42, 0);
-            fail();
-        } catch(ArithmeticException e) {
-            // pass
-        }
     }
 
     @Test
@@ -272,13 +267,8 @@ public class MyMathTest {
         assertEquals(1, myMath.fac(0));
     }
 
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void factorialOfNegative() {
-        try {
             myMath.fac(-1);
-            fail();
-        } catch(ArithmeticException e) {
-            // pass
-        }
     }
 }
