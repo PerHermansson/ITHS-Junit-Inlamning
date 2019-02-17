@@ -32,10 +32,11 @@ public class MyMath {
     }
 
     public double sin(double x) {
-        if (x < 0) {
+        if (x < 0)
             x = x * -1 + Math.PI;
-            if (x > 2 * Math.PI)
-                x -= 2 * Math.PI;
+        if (x > 2 * Math.PI) {  /* Reducera till mellan 0 och 2PI */
+            int n = (int) (x / (2 * Math.PI));
+            x -= n * (2 * Math.PI);
         }
         if (x == Math.PI / 2.0)
             return 1;
