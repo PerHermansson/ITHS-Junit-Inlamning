@@ -266,4 +266,9 @@ public class MyMathTest {
             // pass
         }
     }
+
+    @Test
+    public void factorialOfZero() {
+        assertEquals(1, myMath.fac(0));
+    }
 }
