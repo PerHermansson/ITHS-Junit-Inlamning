@@ -22,6 +22,12 @@ public class MyMath {
     }
 
     public int fac(int a) {
+        /*
+         * Kasta ArithmeticException direkt istället för att påbörja en
+         * beräkning som förr eller senare kommer innebära en division med noll.
+         */
+        if (a < 0)
+            throw new ArithmeticException();
         return 1;
     }
 }
