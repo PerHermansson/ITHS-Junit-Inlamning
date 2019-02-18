@@ -235,18 +235,18 @@ public class MyMathTest {
     }
 
     @Test
-    public void dividePositiveEvenByPositiveEvenWithoutRemainder() {
-        assertEquals(10, myMath.div(1000, 100));
+    public void divideWithoutRemainder() {
+        assertEquals(21, myMath.div(42, 2));
     }
 
     @Test
-    public void dividePositiveEvenByPositiveOddWithoutRemainder() {
-        assertEquals(4, myMath.div(12, 3));
+    public void divideWithRemainderAbove() {
+        assertEquals(21, myMath.div(43, 2));
     }
 
     @Test
-    public void dividePositiveOddByPositiveOddWithoutRemainder() {
-        assertEquals(5, myMath.div(15, 3));
+    public void divideWithRemainderBelow() {
+        assertEquals(20, myMath.div(41, 2));
     }
 
     @Test
