@@ -21,13 +21,15 @@ public class Math {
         return a-b;
     }
 
-    public int fibonacci(int a){
+    public int fibonacci(int a) throws Exception {
+        if (a < 0) throw new Exception();
         if (a == 0) return 0;
         if (a == 1) return 1;
-        return fibonacci(a-2)+fibonacci(a-1);
+        return fibonacci(a - 2)+fibonacci(a -1);
     }
 
-    public int factorial(int a){
+    public int factorial(int a) throws Exception {
+        if (a < 0 ) throw new Exception();
         if (a == 0) return 1;
         return a* factorial(a-1);
     }

@@ -11,7 +11,7 @@ public class MathTestFactorial {
 
     @BeforeClass
     static  public void greetings() throws Exception {
-        System.out.println("Hello! These are tests for FACULTY.");
+        System.out.println("Hello! These are tests for FACTORIAL.");
         System.out.println();
     }
 
@@ -25,12 +25,12 @@ public class MathTestFactorial {
     }
 
     @Test
-    public void facultyTestNormalValue() {
+    public void facultyTestNormalValue() throws Exception {
         assertEquals(720,  math.factorial(6));
     }
 
     @Test
-    public void facultyTestZeroValue() {
+    public void facultyTestZeroValue() throws  Exception{
         assertEquals(1,  math.factorial(0));
     }
 
@@ -38,13 +38,9 @@ public class MathTestFactorial {
     public void facultyTestNegativeValue()throws Exception{
         try {
             math.factorial(-1);
-            fail("Should result in a factorial negativ exception");
-        }
-        catch(ArithmeticException e) {
-            System.out.println("Arithmetic exception: factorial " );
-        }
-        catch(Exception e){
-            fail("Non-Arithmetic exception");
+            fail("Should result in a factorial negative exception");
+        } catch(Exception e) {
+            System.out.println("Arithmetic exception: factorial is not defined for negative values " );
         }
     }
 }
