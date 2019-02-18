@@ -1,15 +1,12 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.sql.SQLOutput;
-
 import static org.junit.Assert.*;
 
 public class BasicMathTestDiv {
 
     @Before
     public void setUp() throws Exception  {
-        System.out.println("Vad ska stå här?");
     }
 
 
