@@ -270,11 +270,6 @@ public class MyMathTest {
     }
 
     @Test
-    public void factorialOfZero() {
-        assertEquals(1, myMath.fac(0));
-    }
-
-    @Test
     public void factorialOfNegative() {
         try {
             myMath.fac(-1);
@@ -282,6 +277,21 @@ public class MyMathTest {
         } catch(ArithmeticException e) {
             // pass
         }
+    }
+
+    @Test
+    public void factorialOfZero() {
+        assertEquals(1, myMath.fac(0));
+    }
+
+    @Test
+    public void factorialOfOne() {
+        assertEquals(1, myMath.fac(1));
+    }
+
+    @Test
+    public void factorialOfTwelve() {
+        assertEquals(479001600, myMath.fac(12));
     }
 
     @Test
