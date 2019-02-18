@@ -15,6 +15,9 @@ public class MathTestFib {
     }
 
     @Test
-    public void fibonacci() {
+    public void fibTestNormalValue() {
+        Math math = new Math();
+        int result = math.fibonacci(4);
+        assertTrue(result == 3 );
     }
 }

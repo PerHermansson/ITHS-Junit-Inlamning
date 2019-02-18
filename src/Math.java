@@ -1,11 +1,10 @@
 public class Math {
 
-    public int div(int a, int b)
-    {
+    public int div(int a, int b) {
         return a/b;
     }
-    public int add(int a, int b)
-    {
+
+    public int add(int a, int b){
         return a+b;
     }
 
@@ -18,8 +17,7 @@ public class Math {
         }
     }
 
-    public int substract(int a, int b)
-    {
+    public double substract(double a, double b){
         return a-b;
     }
 
@@ -29,9 +27,9 @@ public class Math {
         return fibonacci(a-2)+fibonacci(a-1);
     }
 
-    public int faculty( int a){
-        if (a == 1) return 1;
-        return a*faculty(a-1);
+    public int factorial(int a){
+        if (a == 0) return 1;
+        return a* factorial(a-1);
     }
 
 }
