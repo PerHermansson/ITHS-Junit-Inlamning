@@ -10,6 +10,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 public class MyMathTest {
+    private static final double sinDelta = 0.000001;
+
     private MyMath myMath;
 
     @Before
@@ -299,26 +301,21 @@ public class MyMathTest {
 
     @Test
     public void sinOfPiByTwo() {
-        assertEquals(1.0, myMath.sin(Math.PI * (1.0 / 2.0)), 0.0);
-    }
-
-    @Test
-    public void sinOfThreePiByTwo() {
-        assertEquals(-1.0, myMath.sin(Math.PI * (3.0 / 2.0)), 0.0);
+        assertEquals(1.0, myMath.sin(Math.PI * (1.0 / 2.0)), sinDelta);
     }
 
     @Test
     public void sinOfNegativePiByTwo() {
-        assertEquals(-1.0, myMath.sin(Math.PI * (-1.0 / 2.0)), 0.0);
+        assertEquals(-1.0, myMath.sin(Math.PI * (-1.0 / 2.0)), sinDelta);
+    }
+
+    @Test
+    public void sinOfThreePiByTwo() {
+        assertEquals(-1.0, myMath.sin(Math.PI * (3.0 / 2.0)), sinDelta);
     }
 
     @Test
     public void sinOfNegativeThreePiByTwo() {
-        assertEquals(1.0, myMath.sin(Math.PI * (-3.0 / 2.0)), 0.0);
-    }
-
-    @Test
-    public void sinOfThreePi() {
-        assertEquals(0.0, myMath.sin(3.0 * Math.PI), 0.0);
+        assertEquals(1.0, myMath.sin(Math.PI * (-3.0 / 2.0)), sinDelta);
     }
 }

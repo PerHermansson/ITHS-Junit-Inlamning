@@ -35,16 +35,15 @@ public class MyMath {
     }
 
     public double sin(double x) {
-        if (x < 0)
-            x = x * -1 + Math.PI;
-        if (x > 2 * Math.PI) {  /* Reducera till mellan 0 och 2PI */
-            int n = (int) (x / (2 * Math.PI));
-            x -= n * (2 * Math.PI);
-        }
-        if (x == Math.PI / 2.0)
-            return 1;
-        else if (x == 3.0 * Math.PI / 2.0)
-            return -1;
-        return 0;
+        x %= (Math.PI * 2);
+        if (x < -Math.PI)
+            x += Math.PI * 2;
+        else if (x > Math.PI)
+            x -= Math.PI * 2;
+        double y = x;
+        for (int i = 1; i <= 5; ++i)
+            y += ((i % 2 == 1) ? -1 : 1)
+                    * Math.pow(x, i * 2 + 1) / fac(i * 2 + 1);
+        return y;
     }
 }
