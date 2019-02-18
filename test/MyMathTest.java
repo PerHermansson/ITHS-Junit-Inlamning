@@ -318,4 +318,21 @@ public class MyMathTest {
     public void sinOfNegativeThreePiByTwo() {
         assertEquals(1.0, myMath.sin(Math.PI * (-3.0 / 2.0)), sinDelta);
     }
+
+    @Test
+    public void sinOfOne() {
+        assertEquals(Math.sin(1.0), myMath.sin(1.0), sinDelta);
+    }
+
+    @Test
+    public void sinOfOnePlusTwoPi() {
+        assertEquals(Math.sin(1.0 + 2 * Math.PI),
+                myMath.sin(1.0 + 2 * Math.PI), sinDelta);
+    }
+
+    @Test
+    public void sinOfOneMinusFourPi() {
+        assertEquals(Math.sin(1.0 - 4 * Math.PI),
+                myMath.sin(1.0 - 4 * Math.PI), sinDelta);
+    }
 }
