@@ -5,14 +5,18 @@
  */
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class MyMathTest {
     private static final double sinDelta = 0.000001;
 
     private MyMath myMath;
+
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
 
     @Before
     public void setUp() {
@@ -261,22 +265,16 @@ public class MyMathTest {
 
     @Test
     public void dividePositiveByZero() {
-        try {
-            myMath.div(42, 0);
-            fail();
-        } catch(ArithmeticException e) {
-            // pass
-        }
+        thrown.expect(ArithmeticException.class);
+
+        myMath.div(42, 0);
     }
 
     @Test
     public void factorialOfNegative() {
-        try {
-            myMath.fac(-1);
-            fail();
-        } catch(ArithmeticException e) {
-            // pass
-        }
+        thrown.expect(ArithmeticException.class);
+
+        myMath.fac(-1);
     }
 
     @Test
