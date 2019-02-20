@@ -8,10 +8,12 @@ public class BasicMathTestFibonacci {
 
     @Before
     public void before() throws Exception {
+        System.out.println("Fibonacci test starting");
     }
 
     @After
     public void after() throws Exception {
+        System.out.println("Fibonacci test ended");
     }
 
     @Test
