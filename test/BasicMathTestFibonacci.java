@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
 @Category(BasicMath.class)
 public class BasicMathTestFibonacci {
+
     String type;
 
     @Before
