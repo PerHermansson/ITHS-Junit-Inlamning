@@ -79,6 +79,12 @@ public class MathJosefineFibonacciTest {
     }
 
     @Test
+    public void fibonacciDecimalValue() {
+        assertEquals("Test failed: actual value does not match expected value",
+                8, math.fibonacciSum((int)5.5));
+    }
+
+    @Test
     public void isFibonacci() {
         assertTrue(math.fibonacciNumber(5));
     }

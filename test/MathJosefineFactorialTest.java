@@ -79,6 +79,12 @@ public class MathJosefineFactorialTest {
         }
     }
 
+    @Test
+    public void factorialDecimalValue() {
+        assertEquals("Test failed: actual value does not match expected value",
+                1, math.factorial((int)1.5));
+    }
+
     @After
     public void tearDown() throws Exception {
     }
