@@ -5,13 +5,15 @@ import static org.junit.Assert.*;
 
 public class BasicMathTestAdd {
 
+    private BasicMath mathTest;
+
     @Before
     public void setUp() throws Exception {
+        mathTest = new BasicMath();
     }
 
     @Test
     public void simpleAddTest() {
-        BasicMath mathTest = new BasicMath();
         int a = 4;
         int b = 2;
         int result = mathTest.add(a, b);
@@ -20,7 +22,6 @@ public class BasicMathTestAdd {
 
     @Test
     public void addNegativeNumbers(){
-        BasicMath mathTest = new BasicMath();
         int a = -4;
         int b = -2;
         int result = mathTest.add(a, b);
@@ -29,7 +30,6 @@ public class BasicMathTestAdd {
 
     @Test
     public void addDecimalNumbers(){
-        BasicMath mathTest = new BasicMath();
         double a = 0.4;
         double b = 0.3;
         double result = 0;
