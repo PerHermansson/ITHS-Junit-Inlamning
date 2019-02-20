@@ -3,8 +3,8 @@ public class Annoteringar {
     annoteringar -
 -@test -@ignore -@before -@after -@category -@beforeclass -@afterclass
 
-Jag var nog rätt enkelspårig i min tanke när jag gjorde mina test.
-Jag har än så länge kört alla mina testfall i heltal (Int) och fibonacci i long tal.
+Jag har gjord mina test på en enkel och lätt sätt att
+jag har än så länge kört alla mina testfall i heltal (Int) och fibonacci i long tal.
 Jag tänkte på ekvivalensindelning på det viset att jag skapade mina test runt nollan och testade om
 de fyra fundamentala räknesätten fungerade som det skulle vilket dem självklart borde göra.
 Men jag gör ju denna uppgift för att lära mig att sätta upp testfall och inte faktiskt testa
@@ -18,6 +18,8 @@ testfall körs och inte upprepas i varje testfall i testsuiten.
 @AfterClass är bra att ha om @BeforeClass kastar en exception, men det är inget jag tittat närmare på.
 Jag har också gett mig på att göra Fibonacci för extrauppgiften, och har testat med några
 positiva och negative tal, där den testar att den hamnar på rätt tal.
+När körde jag fibonacci kom jag veta att om användar vi INT return i method den method kan bli användas med
+assertTrue och assertFalse men for static method måste vi använda assertEquals.
 
 
      */
