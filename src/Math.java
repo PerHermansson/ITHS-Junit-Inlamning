@@ -1,10 +1,6 @@
 package com.hmkcode.junit;
 public class Math {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-
     public double sum(double x, double y) {
         return x + y;
     }
