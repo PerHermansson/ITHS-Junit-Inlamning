@@ -1,7 +1,4 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -10,8 +7,8 @@ public class MathTestSubstract {
 
     @BeforeClass
     static  public void greetings() throws Exception {
-        System.out.println("Hello! These are tests for SUBSTRACTION.");
-        System.out.println();
+        System.out.println("----------");
+        System.out.println("SUBSTRACTION is under test...");
     }
 
     @Before
@@ -50,8 +47,16 @@ public class MathTestSubstract {
     }
 
     @Test
-    public void substractTestMaxIntegerValue() {
-        assertEquals(Integer.MAX_VALUE,  math.substract(Integer.MAX_VALUE, 0),0.00000001);
+    public void substractTestMaxDoubleValue() {
+        assertEquals(Double.MAX_VALUE,  math.substract(Double.MAX_VALUE, 0),0.00000001);
     }
+
+
+    @AfterClass
+    static  public void finish(){
+        System.out.println("----------");
+        System.out.println(" ");
+    }
+
 
 }

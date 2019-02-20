@@ -1,7 +1,4 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.experimental.categories.Category;
 import static org.junit.Assert.*;
 
@@ -14,9 +11,9 @@ public class MathTestAdd {
     private Math math;
 
     @BeforeClass
-    static  public void greetings() throws Exception {
-        System.out.println("Hello! These are tests for ADDITION.");
-        System.out.println();
+    static  public void start(){
+        System.out.println("----------");
+        System.out.println("ADDITION is under test...");
     }
 
     @Before
@@ -41,7 +38,7 @@ public class MathTestAdd {
     public void addTestMaxValue() {
         System.out.println("Test: boundary value a=Integer.MAX_VALUE, b=1, result=Integer.MIN_VALUE");
         int result = math.add(Integer.MAX_VALUE, 1);
-        assertTrue(result==Integer.MIN_VALUE);
+        assertTrue(result == Integer.MIN_VALUE);
     }
 
     @Category({NormalCaseTest.class, BoundaryCaseTest.class})
@@ -75,6 +72,14 @@ public class MathTestAdd {
         int result=math.add(10, 0);
         assertTrue(result == 10);
     }
+
+    @AfterClass
+    static  public void finish(){
+        System.out.println("----------");
+        System.out.println("");
+    }
+
+
 
 
 

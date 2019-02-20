@@ -1,7 +1,4 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -11,8 +8,9 @@ public class MathTestDiv {
 
     @BeforeClass
     static  public void greetings() throws Exception {
-        System.out.println("Hello! These are tests for DIVISION.");
-        System.out.println();
+        System.out.println("----------");
+        System.out.println("DIVISION  is under test...");
+
     }
 
     @Before
@@ -64,6 +62,11 @@ public class MathTestDiv {
 
     }
 
+    @AfterClass
+    static  public void finish(){
+        System.out.println("----------");
+        System.out.println(" ");
+    }
 
 
 }

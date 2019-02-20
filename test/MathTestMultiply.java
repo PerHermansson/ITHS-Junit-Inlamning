@@ -1,7 +1,4 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -11,8 +8,8 @@ public class MathTestMultiply {
 
     @BeforeClass
     static  public void greetings() throws Exception {
-        System.out.println("Hello! These are tests for Multiply.");
-        System.out.println();
+        System.out.println("----------");
+        System.out.println("Multiply is under test...");
     }
 
     @Before
@@ -54,4 +51,11 @@ public class MathTestMultiply {
                 System.out.println("Exeption: multiply strings!");
             }
     }
+
+    @AfterClass
+    static  public void finish(){
+        System.out.println("----------");
+        System.out.println(" ");
+    }
+
 }

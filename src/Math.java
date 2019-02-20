@@ -31,7 +31,7 @@ public class Math {
     public int factorial(int a) throws Exception {
         if (a < 0 ) throw new Exception();
         if (a == 0) return 1;
-        return a* factorial(a-1);
+        return a * factorial(a-1);
     }
 
 }

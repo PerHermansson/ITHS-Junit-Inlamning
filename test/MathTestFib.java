@@ -1,7 +1,4 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -11,8 +8,8 @@ public class MathTestFib {
 
     @BeforeClass
     static  public void greetings() throws Exception {
-        System.out.println("Hello! These are tests for FIBONACCI.");
-        System.out.println();
+        System.out.println("----------");
+        System.out.println("FIBONACCI is under test...");
     }
 
     @Before
@@ -26,7 +23,7 @@ public class MathTestFib {
 
     @Test
     public void fibTestNormalValue() throws Exception {
-        assertEquals(3,  math.fibonacci(4));
+        assertEquals(21,  math.fibonacci(8));
     }
 
     @Test
@@ -39,26 +36,22 @@ public class MathTestFib {
         assertEquals(1,  math.fibonacci(1));
     }
 
+   
     @Test
-    public void fibTestNegativeValue()throws Exception{
+    public void fibTestNegativeValue(){
         try {
             math.fibonacci(-1);
             fail("Should result in a factorial negative exception");
         } catch(Exception e) {
-            System.out.println("Arithmetic exception: fibonacci method is not defined for negative values " );
+            System.out.println("Exception: fibonacci method is not defined for negative values " );
         }
     }
 
-   /* @Test
-    public void fibTestMaxValue()  throws Exception {
-        System.out.println( math.fibonacci(Integer.MAX_VALUE));
-    }*/
-
-
-
-
-
-
+    @AfterClass
+    static  public void finish(){
+        System.out.println("----------");
+        System.out.println(" ");
+    }
 
 
 }
