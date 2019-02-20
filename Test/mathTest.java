@@ -102,9 +102,9 @@ public class MathTest {
     }
     @Test
     public void multiplyNormal() {
-        int result=math.multiply(10, 5);
+        int result=math.multiply(10000, 50000);
         System.out.println("Multiply normal Result = " + result);
-        assertTrue(result==50);
+        assertTrue(result==500000000);
     }
     @Test
     public void multiplyWihtMinusValue(){
@@ -133,9 +133,9 @@ public class MathTest {
     }
     @Test
     public void subNormal() {
-        int result=math.sub(10, 5);
+        int result=math.sub(9435, 5000);
         System.out.println("Subtract normal value Result = " + result);
-        assertTrue(result==5);
+        assertTrue(result==4435);
     }
     @Test
     public void subWithDouble() {
