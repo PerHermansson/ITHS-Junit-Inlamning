@@ -19,6 +19,22 @@ public class BasicMath {
         }
 
         public int subtract (int a, int b) {return a-b; }
+
+        public int fibonacci (int a){
+            if (a == 0 ){
+                return 0;
+            }
+            else if (a == 1){
+                return 1;
+            }
+            else{
+                int fibo = 0;
+                fibo = fibonacci(a-1) + fibonacci(a-2 );
+                return fibo;
+            }
+
+
+        }
 }
 
 

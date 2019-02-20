@@ -38,5 +38,13 @@ public class BasicMathTestAdd {
         //Does not work because the mathTest.add method is of the type integer, program can't handle decimal numbers
     }
 
+    @Test
+    public void FibonacciTest(){
+        int a = 5;
+        int result = mathTest.fibonacci(a);
+        System.out.println(result);
+        assertTrue(result == 5);
+    }
+
 
 }
