@@ -3,7 +3,7 @@ public class Annoteringar {
     annoteringar -
 -@test -@ignore -@before -@after -@category -@beforeclass -@afterclass
 
-Jag har gjord mina test på en enkel och lätt sätt att
+Jag har gjort mina test på en enkel och lätt sätt att
 jag har än så länge kört alla mina testfall i heltal (Int) och fibonacci i long tal.
 Jag tänkte på ekvivalensindelning på det viset att jag skapade mina test runt nollan och testade om
 de fyra fundamentala räknesätten fungerade som det skulle vilket dem självklart borde göra.
