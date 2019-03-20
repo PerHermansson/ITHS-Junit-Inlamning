@@ -18,7 +18,7 @@ public class BasicMathTestDiv {
         int a = 4;
         int b = 2;
         int result = mathTest.div(a, b);
-        assertTrue(result == a/b);
+        assertTrue(result == 2);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class BasicMathTestDiv {
         int a = -4;
         int b = -2;
         int result = mathTest.div(a, b);
-        assertTrue(result == a/b);
+        assertTrue(result == 2);
         System.out.println(result);
     }
 
@@ -35,6 +35,6 @@ public class BasicMathTestDiv {
         int a = 4;
         int b = 0;
         int result = mathTest.div(a ,b);
-        assertTrue(result == a/b);
+        assertTrue(result == 0);
     }
 }
