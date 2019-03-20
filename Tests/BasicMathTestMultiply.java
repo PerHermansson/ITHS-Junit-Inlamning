@@ -16,7 +16,7 @@ public class BasicMathTestMultiply {
         int a = 4;
         int b = 2;
         int result = mathTest.multiply(a, b);
-        assertTrue(result == a*b);
+        assertTrue(result == 8);
     }
 
     @Test
@@ -24,6 +24,6 @@ public class BasicMathTestMultiply {
         int a = -4;
         int b = -2;
         int result = mathTest.multiply(a, b);
-        assertTrue(result == a*b);
+        assertTrue(result == 8);
     }
 }

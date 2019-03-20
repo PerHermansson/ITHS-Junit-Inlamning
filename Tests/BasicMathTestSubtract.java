@@ -16,7 +16,7 @@ public class BasicMathTestSubtract {
         int a = 4;
         int b = 2;
         int result = mathTest.subtract(a, b);
-        assertTrue(result == a-b);
+        assertTrue(result == 2);
     }
 
     @Test
@@ -24,6 +24,6 @@ public class BasicMathTestSubtract {
         int a = -4;
         int b = -2;
         int result = mathTest.subtract(a, b);
-        assertTrue(result == a-b);
+        assertTrue(result == -2);
     }
 }

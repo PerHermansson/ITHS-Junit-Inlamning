@@ -17,7 +17,7 @@ public class BasicMathTestAdd {
         int a = 4;
         int b = 2;
         int result = mathTest.add(a, b);
-        assertTrue(result == a+b);
+        assertTrue(result == 6);
     }
 
     @Test
@@ -25,7 +25,7 @@ public class BasicMathTestAdd {
         int a = -4;
         int b = -2;
         int result = mathTest.add(a, b);
-        assertTrue(result == a+b);
+        assertTrue(result == -6);
     }
 
     @Test
